@@ -4,9 +4,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="mx-auto max-w-6xl px-4 py-8">
       
       This is a text
     </main>
   )
 }
+ 
