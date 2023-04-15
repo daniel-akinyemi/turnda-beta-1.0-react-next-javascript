@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.17
   autoprefixer: ^10.4.14
   eslint: 8.38.0
   eslint-config-next: 13.3.0
@@ -11,6 +12,7 @@ specifiers:
   tailwindcss: ^3.3.1
 
 dependencies:
+  '@heroicons/react': 2.0.17_react@18.2.0
   eslint: 8.38.0
   eslint-config-next: 13.3.0_eslint@8.38.0
   next: 13.3.0_biqbaboplfbrettd7655fr4n2y
@@ -66,6 +68,14 @@ packages:
   /@eslint/js/8.38.0:
     resolution: {integrity: sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@heroicons/react/2.0.17_react@18.2.0:
+    resolution: {integrity: sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
