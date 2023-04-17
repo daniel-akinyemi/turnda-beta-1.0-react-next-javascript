@@ -1,4 +1,5 @@
-import { CloudIcon } from "@heroicons/react/24/outline";
+import { CloudIcon} from "@heroicons/react/24/outline";
+import DICard from "./DICard";
 
 const DetailedInformation = () => {
   return (
@@ -15,7 +16,12 @@ const DetailedInformation = () => {
           </div>
         </div>
       </div>
-      <div className="more-weather-detail"></div>
+      <section className="flex flex-wrap justify-between ">
+      <DICard/>
+      <DICard/>
+      <DICard/>
+      <DICard/>
+      </section>
     </section>
   );
 };
