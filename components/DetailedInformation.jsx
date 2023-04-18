@@ -16,7 +16,7 @@ const DetailedInformation = () => {
           </div>
         </div>
       </div>
-      <section className="flex flex-wrap justify-between ">
+      <section className="flex flex-wrap justify-between my-4">
       <DICard/>
       <DICard/>
       <DICard/>
