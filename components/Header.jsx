@@ -6,13 +6,15 @@ const Header = () => {
 
 
   const [location, setLocation] = useState('')
-  const [data, setData] = useState({})
+ 
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.NEXT_PUBLIC_API_KEY}`
+
   const searchLocation =()=>{
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=7f5ff51bf0747ab4dcbf7bc68d77818a`
 
     fetch(url)
-    .then(res =>res.json)
-    .then(res=>setData(res))
+    .then(res =>res.json())
+    .then(res=>console.log(res))
+    
 
     setLocation('')
   }
