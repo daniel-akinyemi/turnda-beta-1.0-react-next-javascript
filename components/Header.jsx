@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Header = () => {
 
-
+  const [results,setResults] = useState({})
   const [location, setLocation] = useState('')
  
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.NEXT_PUBLIC_API_KEY}`
@@ -13,9 +13,9 @@ const Header = () => {
 
     fetch(url)
     .then(res =>res.json())
-    .then(res=>console.log(res))
+    .then(data=>setResults(data))
     
-
+   
     setLocation('')
   }
 
