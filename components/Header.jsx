@@ -3,7 +3,6 @@ import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 const Header = () => {
-
   const [results,setResults] = useState({})
   const [location, setLocation] = useState('')
  
