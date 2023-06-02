@@ -1,22 +1,26 @@
-'use client'
 import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import Axios from 'axios'
+import { useEffect, useState } from "react";
 
-const Header = () => {
-  const [results,setResults] = useState({})
-  const [location, setLocation] = useState('')
+const Header = ({setLocation}) => {
+
+  const [text,setText] = useState(null)
+  
  
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.NEXT_PUBLIC_API_KEY}`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${process.env.NEXT_PUBLIC_API_KEY}`
 
   const searchLocation =()=>{
 
-    fetch(url)
-    .then(res =>res.json())
-    .then(data=>setResults(data))
+    Axios.get(url).then((res)=>setLocation(res.data))
     
    
-    setLocation('')
+    setText(' ')
+    
   }
+
+  useEffect(()=>{
+    searchLocation()
+  },[])
 
   return (
     <div className=" mb-4 flex justify-between items-center">
@@ -24,8 +28,8 @@ const Header = () => {
       <input
         className="flex-grow px-4 text-sm font-medium bg-gray-100 mx-4 py-2 rounded-md"
         type="text"
-        value={location}
-        onChange={e => setLocation(e.target.value)}
+        value={text}
+        onChange={e => setText(e.target.value)}
         placeholder="Enter A Location"
       />
 

@@ -1,6 +1,6 @@
 
 import { SunIcon,ArrowPathIcon } from '@heroicons/react/24/outline'
-const MainWeatherCard = () => {
+const MainWeatherCard = ({location}) => {
 
   // const locations = [
   //   {
@@ -27,13 +27,13 @@ const MainWeatherCard = () => {
       <div className="mwc-bk-2 flex space-x-4">
         <SunIcon className='w-10 h-10'/>
         <div className="mwc-bk-2-1 text-lg">
-          <div className='font-light'>18° C</div>
-          <div className=' font-bold'>Hujan Berawan</div>
+          <div className='font-light'>{location.main.temp}° F</div>
+          <div className=' font-bold'>{location.name}</div>
         </div>
       </div>
 
       <div className="mwc-bk-3 flex space-x-2 text-xs items-center">
-        <div>Terakhir update 3:00PM</div>
+        <div>{location?.weather[0].description}</div>
         <ArrowPathIcon className='h-4 w-4'/>        
       </div>
 
