@@ -27,13 +27,13 @@ const MainWeatherCard = ({location}) => {
       <div className="mwc-bk-2 flex space-x-4">
         <SunIcon className='w-10 h-10'/>
         <div className="mwc-bk-2-1 text-lg">
-          <div className='font-light'>{location.main.temp}° F</div>
-          <div className=' font-bold'>{location.name}</div>
+          <div className='font-light'>{location && location.main.temp}° F</div>
+          <div className=' font-bold'>{location && location.name}</div>
         </div>
       </div>
 
       <div className="mwc-bk-3 flex space-x-2 text-xs items-center">
-        <div>{location?.weather[0].description}</div>
+        <div>{location && location?.weather[0].description}</div>
         <ArrowPathIcon className='h-4 w-4'/>        
       </div>
 
