@@ -1,7 +1,5 @@
-
-import { SunIcon,ArrowPathIcon } from '@heroicons/react/24/outline'
-const MainWeatherCard = ({location}) => {
-
+import { SunIcon, ArrowPathIcon } from "@heroicons/react/24/outline";
+const MainWeatherCard = ({ location }) => {
   // const locations = [
   //   {
   //     id:1,
@@ -25,21 +23,19 @@ const MainWeatherCard = ({location}) => {
       </div>
 
       <div className="mwc-bk-2 flex space-x-4">
-        <SunIcon className='w-10 h-10'/>
+        <SunIcon className="w-10 h-10" />
         <div className="mwc-bk-2-1 text-lg">
-          <div className='font-light'>{location && location.main.temp}° F</div>
-          <div className=' font-bold'>{location && location.name}</div>
+          <div className="font-light">{location && location.main.temp}° F</div>
+          <div className=" font-bold">{location && location.name}</div>
         </div>
       </div>
 
       <div className="mwc-bk-3 flex space-x-2 text-xs items-center">
         <div>{location && location?.weather[0].description}</div>
-        <ArrowPathIcon className='h-4 w-4'/>        
+        <ArrowPathIcon className="h-4 w-4" />
       </div>
-
-
     </div>
-  )
-}
+  );
+};
 
-export default MainWeatherCard
+export default MainWeatherCard;
