@@ -13,8 +13,8 @@ const ParentComponent = () => {
     <div>
       <Header location={location} setLocation={setLocation} />
       <MainWeatherCard location={location} />
-      <SecondCard />
-      <DetailedInformation />
+      <DetailedInformation location={location} />
+      {/* <SecondCard /> */}
     </div>
   );
 };
